@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIで「毎日の面倒な作業」を自動化します｜先着3社モニター募集</title>
+  <meta name="description" content="小さな会社・個人事業主向けに、問い合わせ返信・集計・SNS投稿などの定型作業をAIで自動化します。先着3社限定のモニター価格1万円。">
+  <meta property="og:title" content="AIで「毎日の面倒な作業」を自動化します｜先着3社モニター募集">
+  <meta property="og:description" content="問い合わせ返信・集計・SNS投稿づくり。毎日30分の作業を、AIに任せませんか。">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --sub: #555;
+      --line: #e5e5e5;
+      --bg: #fafaf7;
+      --accent: #1f6feb;
+      --accent-dark: #1554b8;
+      --warn: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+    h1 { font-size: 1.9rem; line-height: 1.4; margin: 0 0 16px; }
+    h2 { font-size: 1.4rem; margin: 0 0 24px; }
+    h3 { font-size: 1.05rem; margin: 0 0 6px; }
+    p { margin: 0 0 12px; }
+    .hero { padding: 72px 0 56px; background: #fff; }
+    .badge {
+      display: inline-block; font-size: .85rem; font-weight: bold;
+      color: var(--warn); border: 1px solid var(--warn);
+      border-radius: 999px; padding: 2px 12px; margin-bottom: 16px;
+    }
+    .lead { font-size: 1.1rem; color: var(--sub); }
+    .cta {
+      display: inline-block; margin-top: 20px; padding: 14px 32px;
+      background: var(--accent); color: #fff; font-weight: bold;
+      text-decoration: none; border-radius: 8px;
+    }
+    .cta:hover { background: var(--accent-dark); }
+    .note { font-size: .85rem; color: var(--sub); }
+    ul.checks { padding-left: 0; list-style: none; }
+    ul.checks li { padding-left: 1.6em; position: relative; margin-bottom: 8px; }
+    ul.checks li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+    .cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+    .card .before { color: var(--sub); font-size: .9rem; }
+    .card .after { font-weight: bold; font-size: .9rem; }
+    ol.steps { padding-left: 1.4em; }
+    ol.steps li { margin-bottom: 12px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid var(--line); padding: 12px; text-align: left; vertical-align: top; }
+    th { background: #f3f4f6; width: 32%; }
+    .price { font-size: 1.6rem; font-weight: bold; }
+    .strike { text-decoration: line-through; color: var(--sub); font-size: 1rem; margin-right: 8px; }
+    details { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    summary { font-weight: bold; cursor: pointer; }
+    details p { margin-top: 10px; }
+    .final { text-align: center; background: #fff; }
+    footer { padding: 32px 0; font-size: .8rem; color: var(--sub); text-align: center; }
+    @media (max-width: 520px) { h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">先着3社限定・モニター募集中</span>
+      <h1>毎日30分の「面倒な作業」、<br>AIに任せませんか。</h1>
+      <p class="lead">問い合わせへの返信、売上の集計、SNS投稿づくり。<br>小さな会社・個人事業主の定型作業を、AIで自動化します。</p>
+      <a class="cta" href="{{FORM_URL}}" target="_blank" rel="noopener">無料で相談する（3分で入力）</a>
+      <p class="note">打ち合わせなし・フォーム入力だけで相談できます。</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>こんなこと、ありませんか？</h2>
+        <ul class="checks">
+          <li>同じような問い合わせメールに、毎回ゼロから返信を書いている</li>
+          <li>売上や予約をスプレッドシートに手で転記・集計している</li>
+          <li>SNSやブログを更新したいが、文章を考える時間がない</li>
+          <li>ChatGPTやClaudeは気になるが、仕事にどう使えばいいかわからない</li>
+          <li>システム会社に頼むほどの予算はない</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>自動化できることの例</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>問い合わせ返信の下書き</h3>
+            <p class="before">Before: 1件10分、毎回手書き</p>
+            <p class="after">After: 届いた瞬間にAIが返信案を作成。確認して送るだけ</p>
+          </div>
+          <div class="card">
+            <h3>売上・予約の集計</h3>
+            <p class="before">Before: 月末に半日かけて手作業</p>
+            <p class="after">After: フォームやメールから自動でシートに集計・週次レポート</p>
+          </div>
+          <div class="card">
+            <h3>SNS・ブログ投稿づくり</h3>
+            <p class="before">Before: ネタ出しで手が止まる</p>
+            <p class="after">After: お店の情報から1週間分の投稿案を自動生成</p>
+          </div>
+        </div>
+        <p class="note" style="margin-top:16px">※ 上記は想定例です。実際の効果は業務内容によって異なります。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>進め方</h2>
+        <ol class="steps">
+          <li><strong>無料相談フォームに入力（3分）</strong><br>困っている作業を書いてください。</li>
+          <li><strong>自動化プランをお送りします（3営業日以内）</strong><br>何を・どう自動化するか、費用と期間をメールでご提案します。</li>
+          <li><strong>ご納得いただければ制作開始</strong><br>お使いのGoogleスプレッドシート・Gmail等の中に仕組みを作ります。新しいツールを覚える必要はありません。</li>
+          <li><strong>納品・使い方のご案内</strong><br>操作手順書をお渡しします。納品後2週間は無料で調整します。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>モニター価格</h2>
+        <table>
+          <tr>
+            <th>小規模自動化 1件</th>
+            <td>
+              <span class="strike">通常 50,000円</span>
+              <span class="price">10,000円</span>（税込）<br>
+              <span class="note">先着3社限定。自動化する作業は1つまで。</span>
+            </td>
+          </tr>
+          <tr>
+            <th>モニターの条件</th>
+            <td>導入後にかんたんなアンケート（5分）にご協力ください。<br>事例として紹介させていただく場合は、社名を伏せる・事前確認するなどご希望に合わせます。</td>
+          </tr>
+          <tr>
+            <th>お支払い</th>
+            <td>プランにご納得いただいた後のお支払いです。相談・プランのご提案は無料です。</td>
+          </tr>
+          <tr>
+            <th>別途かかる費用</th>
+            <td>AIの利用料（多くの場合 月数百円程度）はお客様のアカウントでのご負担となります。プラン提案時に目安をお伝えします。</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>このサービスについて（正直に書きます）</h2>
+        <p>このサービスは、<strong>AIを共同創業者にして90日で事業をつくる</strong>という挑戦の中で生まれました。設計と制作をAIが担当し、人間がご連絡と品質確認を担当します。</p>
+        <p>まだ始まったばかりで、実績はこれから作るところです。だからこそモニター価格でお引き受けし、その過程をSNSで公開しています（お客様の情報は出しません）。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>よくある質問</h2>
+        <details>
+          <summary>パソコンが苦手でも大丈夫ですか？</summary>
+          <p>はい。普段お使いのGmailやスプレッドシートの中に仕組みを作るので、新しい操作はほとんどありません。手順書もお渡しします。</p>
+        </details>
+        <details>
+          <summary>打ち合わせは必要ですか？</summary>
+          <p>基本はフォームとメールのやりとりで完結します。ご希望があればオンラインで30分ほどお話しすることもできます。</p>
+        </details>
+        <details>
+          <summary>お客様の個人情報を扱っても大丈夫ですか？</summary>
+          <p>扱うデータの範囲はプラン提案時に明記し、ご了承いただいたうえで制作します。個人情報をAIに送らない設計も可能です。</p>
+        </details>
+        <details>
+          <summary>うまく自動化できなかったら？</summary>
+          <p>プラン提案の段階で「できること・できないこと」をはっきりお伝えします。納品後2週間は無料で調整し、それでも合意した内容を実現できない場合は全額返金します。</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>まずは困っている作業を1つ教えてください</h2>
+        <p>相談・プラン提案は無料です。無理な営業は一切しません。</p>
+        <a class="cta" href="{{FORM_URL}}" target="_blank" rel="noopener">無料で相談する（3分で入力）</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>運営: {{OPERATOR_NAME}} ／ お問い合わせ: {{CONTACT_EMAIL}}</p>
+      <p>制作の舞台裏は X <a href="https://x.com/{{X_HANDLE}}">@{{X_HANDLE}}</a> で公開中</p>
+    </div>
+  </footer>
+
+</body>
+</html>
